@@ -4,6 +4,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Dashboard from './pages/Dashboard'
 
 function ProtectedLayout() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route element={<ProtectedRoute />}>
             <Route element={<ProtectedLayout />}>
-              <Route path="/dashboard" element={<div>Dashboard</div>} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/profile" element={<div>Profile</div>} />
               <Route path="/connections" element={<div>Connections</div>} />
             </Route>
