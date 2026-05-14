@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import api from '../api/axios'
 
 export default function Dashboard() {
   const [profile, setProfile] = useState(null)
   const [error, setError] = useState(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     api.get('/api/user/profile/')
@@ -71,7 +73,7 @@ export default function Dashboard() {
               {profile.rating ?? 'Unrated'}
             </strong>
           </p>
-          <button style={{
+          <button onClick={() => navigate('/profile')} style={{
             background: 'var(--primary)', color: '#fff',
             border: 'none', borderRadius: '8px',
             padding: '8px 20px', fontSize: '14px',

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
+import Profile from './pages/Profile'
 
 function ProtectedLayout() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route element={<ProtectedLayout />}>
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/profile" element={<div>Profile</div>} />
+              <Route path="/profile" element={<Profile />} />
               <Route path="/connections" element={<div>Connections</div>} />
             </Route>
           </Route>
