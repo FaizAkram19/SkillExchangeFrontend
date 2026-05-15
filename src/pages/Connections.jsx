@@ -75,7 +75,7 @@ function UserModal({ data, isSuggestion, onClose }) {
       display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20,
     }}>
       <div onClick={e => e.stopPropagation()} style={{
-        background: 'var(--card-bg)', border: '1px solid var(--border)',
+        background: 'var(--surface)', border: '1px solid var(--border)',
         borderRadius: 16, padding: '28px 28px 24px',
         width: '100%', maxWidth: 400,
         display: 'flex', flexDirection: 'column', gap: 18,
@@ -117,7 +117,7 @@ function ConnectionCard({ conn, currentUserId, onExpand, actions }) {
   const other = conn.sender?.id === currentUserId ? conn.receiver : conn.sender
   return (
     <div style={{
-      background: 'var(--card-bg)', border: '1px solid var(--border)',
+      background: 'var(--surface)', border: '1px solid var(--border)',
       borderRadius: 12, padding: '14px 16px',
       display: 'flex', alignItems: 'center', gap: 12,
     }}>
@@ -142,7 +142,7 @@ function ConnectionCard({ conn, currentUserId, onExpand, actions }) {
 function SuggestionCard({ profile, onExpand, onConnect, loading }) {
   return (
     <div style={{
-      background: 'var(--card-bg)', border: '1px solid var(--border)',
+      background: 'var(--surface)', border: '1px solid var(--border)',
       borderRadius: 12, padding: '14px 16px',
       display: 'flex', alignItems: 'center', gap: 12,
     }}>
