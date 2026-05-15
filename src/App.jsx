@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
+import Connections from './pages/Connections'
 
 function ProtectedLayout() {
   return (
@@ -28,7 +29,7 @@ function App() {
             <Route element={<ProtectedLayout />}>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/connections" element={<div>Connections</div>} />
+              <Route path="/connections" element={<Connections />} />
             </Route>
           </Route>
         </Routes>
